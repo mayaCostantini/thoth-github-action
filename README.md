@@ -14,7 +14,6 @@ on:
 jobs:
   validate-dependencies:
     runs-on: ubuntu-latest
-    container: quay.io/thoth-station/s2i-thoth-ubi8-py38:latest
     name: Get Thoth recommenations on your dependencies
     steps:
       - uses: actions/checkout@v3

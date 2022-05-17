@@ -24,6 +24,7 @@ runs:
         mkdir /tmp/thoth/
         cp -r * /tmp/thoth/
         cd /tmp/thoth/
+        pip install thamos
         sed -i "s/pip-tools/${{ inputs.requirements-format }}/g" $GITHUB_ACTION_PATH/actions/ubuntu_config_template.yaml
         thamos config --no-interactive --template $GITHUB_ACTION_PATH/actions/ubuntu_config_template.yaml
         thamos advise --recommendation-type security > advise_result.json
